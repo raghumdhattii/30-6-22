@@ -1,0 +1,19 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+jwt:
+  secret: mallikarjunCts@IIHTTraininggg
+server:
+  port: 8090
+spring:
+  application:
+    name: CtsIIHT_admin-service
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/AirTicketBookingProject2
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
