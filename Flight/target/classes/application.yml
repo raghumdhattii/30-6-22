@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: CtsIIHT_flight-service
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/AirTicketBookingProject2
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
