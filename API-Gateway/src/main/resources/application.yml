@@ -1,0 +1,28 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultzone: http://localhost:8761/eureka
+server:
+  port: 9200
+spring:
+  application:
+    name: CtsIIHT_api-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: admin-service
+        predicates:
+        - Path=/**
+        uri: http://localhost:8090/**
+      - id: booking-service
+        predicates:
+        - Path=/**
+        uri: http://localhost:8081/**
+      - id: flight-service
+        predicates:
+        - Path=/**
+        uri: http://localhost:8082/**
+  main:
+    web-application-type: reactive
